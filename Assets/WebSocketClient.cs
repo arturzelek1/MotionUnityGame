@@ -21,11 +21,11 @@ public class WebSocketClient : MonoBehaviour
     private Quaternion gyroQuaternion;
     private Vector3 position;
     private Vector3 velocity;
-
+     private bool hasLeftInitialPosition = false;
     private Vector3 lastRotationSpeed = Vector3.zero;
     private float maxRotationSpeed = 5.0f;
 
-    private Vector3 initialRotation;
+    private Quaternion initialRotation;
 
     private Vector3 lastGyroData;
     private Vector3 lastAccelData;
@@ -42,7 +42,7 @@ public class WebSocketClient : MonoBehaviour
         ConnectWebSocket();
 
         //initialRotation = transform.rotation.eulerAngles
-
+        initialRotation = transform.rotation;
         Input.gyro.enabled = true;
     }
 
@@ -106,7 +106,7 @@ public class WebSocketClient : MonoBehaviour
                    // Debug.Log($"Parsed Motion Data: {motionData.accelX}, {motionData.accelY}, {motionData.accelZ}, {motionData.gyroX}, {motionData.gyroY}, {motionData.gyroZ}");
 
                     // Wywołaj metodę do poruszania obiektem na podstawie danych
-                    MoveSword(motionData.gyroX, motionData.gyroY, motionData.gyroZ,motionData.accelZ, Time.deltaTime);
+                    //MoveSword(motionData.gyroX, motionData.gyroY, motionData.gyroZ,motionData.accelZ, Time.deltaTime);
                     RotateSword(motionData.gyroX, motionData.gyroY, motionData.gyroZ, Time.deltaTime);
                     //MoveSword(motionData.gyroZ, motionData.gyroY, motionData.gyroX, Time.deltaTime);
                     //MoveSword(motionData.gyroZ, 0, motionData.gyroX);
@@ -132,10 +132,18 @@ public class WebSocketClient : MonoBehaviour
 
     private Vector3 lastValidPosition;
 
+    // Deklaracja zmiennej do przechowywania początkowej rotacji
+
+    // Deklaracja zmiennych
+
+
+    // Deklaracja zmiennych
+   
+
     void MoveSword(float gyroX, float gyroY, float gyroZ, float accelZ,float deltaTime)
     {
         // Skalowanie dla rotacji i translacji
-        const float gyroPositionScale = 10.0f;
+        const float gyroPositionScale = 100.0f;
     
         // Mapping correct axes
         float mappedGyroX = -gyroX * gyroPositionScale; // Obrót wokół osi X
@@ -178,30 +186,53 @@ public class WebSocketClient : MonoBehaviour
             // Przywróć ostatnią poprawną pozycję przy powrocie
             transform.position = lastValidPosition;
         }
-
     void RotateSword(float gyroX, float gyroY, float gyroZ, float deltaTime)
     {
         //Scale for gyro
         const float gyroRotationScale = 20.0f;
-        const float smoothingFactor = 0.8f;
+        const float smoothingFactor = 0.2f;
 
-        //Mapping to rotation axies 
-        float mappedGyroX = -gyroZ * gyroRotationScale; // Obrót wokół osi X
+        // Mapping to rotation axies 
+        float mappedGyroX = gyroZ * gyroRotationScale; // Obrót wokół osi X
         float mappedGyroY = gyroY * gyroRotationScale;  // Obrót wokół osi Y
-        float mappedGyroZ = -gyroX * gyroRotationScale; // Obrót wokół osi Z
+        float mappedGyroZ = gyroX* gyroRotationScale; // Ignorowanie rotacji wokół osi Z
 
         Vector3 currentGyroRotation = new Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
 
         // Wygładzanie danych z żyroskopu
-        Vector3 smoothedGyroRotation = Vector3.Slerp(lastGyroData, currentGyroRotation, smoothingFactor);
+        Vector3 smoothedGyroRotation = Vector3.Lerp(lastGyroData, currentGyroRotation, smoothingFactor);
         lastGyroData = smoothedGyroRotation;
 
         // Obrót za pomocą Quaternion
-        Quaternion gyroRotation = Quaternion.Euler(smoothedGyroRotation * deltaTime);
+        Quaternion gyroRotation = Quaternion.Euler(smoothedGyroRotation);
 
         // Aktualizacja rotacji obiektu
-        transform.rotation = Quaternion.Slerp(transform.rotation, gyroRotation * transform.rotation, deltaTime * 80.0f);
+        transform.localRotation = Quaternion.Slerp(transform.rotation, gyroRotation * transform.rotation, deltaTime * 120.0f);
+    }
 
+    void Rotate(float gyroX, float gyroY, float gyroZ, float deltaTime)
+    {
+        //Scale for gyro
+        const float gyroRotationScale = 20.0f;
+        const float smoothingFactor = 0.2f;
+    
+        //Mapping to rotation axies 
+        float mappedGyroX = gyroY * gyroRotationScale; // Obrót wokół osi X
+        float mappedGyroY = -gyroZ * gyroRotationScale;  // Obrót wokół osi Y
+        float mappedGyroZ = -gyroX * gyroRotationScale; // Obrót wokół osi Z
+    
+        Vector3 currentGyroRotation = new Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
+    
+        // Wygładzanie danych z żyroskopu
+        Vector3 smoothedGyroRotation = Vector3.Lerp(lastGyroData, currentGyroRotation, smoothingFactor);
+        lastGyroData = smoothedGyroRotation;
+    
+        // Obrót za pomocą Quaternion
+        Quaternion gyroRotation = Quaternion.Euler(smoothedGyroRotation);
+    
+        // Aktualizacja rotacji obiektu
+        transform.rotation = Quaternion.Slerp(transform.rotation, gyroRotation * transform.rotation, deltaTime*120.0f);
+    
     }
 
     //void MoveSword(float gyroX, float gyroY, float gyroZ, float accelX, float accelY, float accelZ, float deltaTime)
