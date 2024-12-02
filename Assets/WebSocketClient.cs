@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.UIElements;
 using WebSocketSharp;
@@ -16,23 +17,37 @@ public class MotionData
     public float gyroZ;
 }
 
+[System.Serializable]
+public class RotationData
+{
+    public List<float> quaternion;
+}
+
+[System.Serializable]
+public class GameRotationData
+{
+    public List<float> quaternion;
+}
+
 public class WebSocketClient : MonoBehaviour
 {
-    private Quaternion gyroQuaternion;
-    private Vector3 position;
-    private Vector3 velocity;
+    private UnityEngine.Quaternion gyroQuaternion;
+    private UnityEngine.Vector3 position;
+    private UnityEngine.Vector3 velocity;
      private bool hasLeftInitialPosition = false;
-    private Vector3 lastRotationSpeed = Vector3.zero;
+    private UnityEngine.Vector3 lastRotationSpeed = UnityEngine.Vector3.zero;
     private float maxRotationSpeed = 5.0f;
 
-    private Quaternion initialRotation;
+    private UnityEngine.Quaternion initialRotation;
 
-    private Vector3 lastGyroData;
-    private Vector3 lastAccelData;
+    private UnityEngine.Vector3 lastGyroData;
+    private UnityEngine.Vector3 lastAccelData;
 
     private WebSocket webSocket;
     private Queue<string> messageQueue = new Queue<string>();
 
+
+    private List<float> currentQuaternion = new List<float>();
 
     // Zmienna do przechowywania odniesienia do obiektu
     public GameObject controlledObject; // Przypisz obiekt w Inspectorze
@@ -59,7 +74,7 @@ public class WebSocketClient : MonoBehaviour
 
     void ConnectWebSocket()
     {
-        webSocket = new WebSocket("ws://localhost:8080/motion");
+        webSocket = new WebSocket("ws://localhost:8080/");
 
         webSocket.OnOpen += (sender, e) =>
         {
@@ -69,6 +84,7 @@ public class WebSocketClient : MonoBehaviour
         webSocket.OnMessage += (sender, e) =>
         {
             OnMessageReceived(e.Data);
+            //Debug.Log($"{e.Data}");
         };
 
         webSocket.OnError += (sender, e) =>
@@ -99,18 +115,35 @@ public class WebSocketClient : MonoBehaviour
             if (message.StartsWith("{") && message.EndsWith("}"))
             {
                 MotionData motionData = JsonUtility.FromJson<MotionData>(message);
+                RotationData rotationData = JsonUtility.FromJson<RotationData>(message);
+                GameRotationData gameRotationData = JsonUtility.FromJson<GameRotationData>(message);
 
                 // Sprawdź, czy motionData zostało poprawnie sparsowane
                 if (motionData != null)
                 {
-                   // Debug.Log($"Parsed Motion Data: {motionData.accelX}, {motionData.accelY}, {motionData.accelZ}, {motionData.gyroX}, {motionData.gyroY}, {motionData.gyroZ}");
+                    // Debug.Log($"Parsed Motion Data: {motionData.accelX}, {motionData.accelY}, {motionData.accelZ}, {motionData.gyroX}, {motionData.gyroY}, {motionData.gyroZ}");
 
                     // Wywołaj metodę do poruszania obiektem na podstawie danych
                     //MoveSword(motionData.gyroX, motionData.gyroY, motionData.gyroZ,motionData.accelZ, Time.deltaTime);
-                    RotateSword(motionData.gyroX, motionData.gyroY, motionData.gyroZ, Time.deltaTime);
-                    //MoveSword(motionData.gyroZ, motionData.gyroY, motionData.gyroX, Time.deltaTime);
-                    //MoveSword(motionData.gyroZ, 0, motionData.gyroX);
+                    //RotateSword(motionData.gyroX, motionData.gyroY, motionData.gyroZ, Time.deltaTime);
+                    Debug.Log("Otrzymano dane MotionData");
+                    HandleMotionData(motionData);
+                   
 
+                }
+                if(rotationData !=null)
+                {
+                    //rotateObject(rotationData.quaternion,Time.deltaTime);
+                    //Debug.Log($"RotationData: {message}");
+                    Debug.Log("Otrzymano dane RotationData");
+                    HandleRotationData(rotationData);
+                }
+                if (gameRotationData != null)
+                {
+                    //rotateObject(rotationData.quaternion,Time.deltaTime);
+                    //Debug.Log($"RotationData: {message}");
+                    Debug.Log("Otrzymano dane GameRotationData");
+                    HandleGameRotationData(gameRotationData);
                 }
                 else
                 {
@@ -128,9 +161,39 @@ public class WebSocketClient : MonoBehaviour
             Debug.LogError($"Message content: {message}");
         }
     }
+    void HandleMotionData(MotionData motionData)
+    {
+        // Obsługuje dane z akcelerometru i żyroskopu
+        Debug.Log($"Motion Data: {motionData.accelX}, {motionData.accelY}, {motionData.accelZ}, {motionData.gyroX}, {motionData.gyroY}, {motionData.gyroZ}");
+    }
 
 
-    private Vector3 lastValidPosition;
+    void HandleRotationData(RotationData rotationData)
+    {
+        if (rotationData.quaternion != null && rotationData.quaternion.Count == 4)
+        {
+            // Tworzymy quaternion z listy (zakładając, że jest to 4-elementowa lista)
+            UnityEngine.Quaternion rotation = new UnityEngine.Quaternion(rotationData.quaternion[0], rotationData.quaternion[1], -rotationData.quaternion[2], rotationData.quaternion[3]);
+    
+            float rotationSpeed = 5f; // Możesz dostosować tę wartość w zależności od potrzeb
+            transform.rotation = UnityEngine.Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+        
+    }
+        else
+        {
+            Debug.LogWarning("Niepoprawny quaternion lub brak danych.");
+        }
+        // Obsługuje dane rotacji
+        Debug.Log($"Rotation Data: {string.Join(", ", rotationData.quaternion)}");
+    }
+
+    void HandleGameRotationData(GameRotationData gameRotationData)
+    {
+        // Obsługuje dane rotacji w grze
+        Debug.Log($"Game Rotation Data: {string.Join(", ", gameRotationData.quaternion)}");
+    }
+
+    private UnityEngine.Vector3 lastValidPosition;
 
     // Deklaracja zmiennej do przechowywania początkowej rotacji
 
@@ -138,7 +201,22 @@ public class WebSocketClient : MonoBehaviour
 
 
     // Deklaracja zmiennych
-   
+    void rotateObject(float deltTime, List<float> quaternion)
+    {
+        // Sprawdzenie, czy lista quaternionów nie jest pusta
+        if (quaternion != null && quaternion.Count == 4)
+        {
+            // Tworzymy quaternion z listy (zakładając, że jest to 4-elementowa lista)
+            UnityEngine.Quaternion rotation = new UnityEngine.Quaternion(quaternion[0], quaternion[1], quaternion[2], quaternion[3]);
+
+            // Przykład: Rotacja obiektu w grze
+            transform.rotation = UnityEngine.Quaternion.Slerp(transform.rotation, rotation, deltTime);
+        }
+        else
+        {
+            Debug.LogWarning("Niepoprawny quaternion lub brak danych.");
+        }
+    }
 
     void MoveSword(float gyroX, float gyroY, float gyroZ, float accelZ,float deltaTime)
     {
@@ -152,10 +230,10 @@ public class WebSocketClient : MonoBehaviour
         float mappedAccel = accelZ;
     
         // Pozycjonowanie na podstawie żyroskopu
-        Vector3 gyroPositionChange = new Vector3(mappedAccel, 0, mappedGyroZ) * gyroPositionScale * deltaTime;
+        UnityEngine.Vector3 gyroPositionChange = new UnityEngine.Vector3(mappedAccel, 0, mappedGyroZ) * gyroPositionScale * deltaTime;
     
         // Nowa pozycja miecza
-        Vector3 newPosition = transform.position + gyroPositionChange;
+        UnityEngine.Vector3 newPosition = transform.position + gyroPositionChange;
     
         // Ograniczenia osiowe
         float maxX = 0.5f;
@@ -197,17 +275,17 @@ public class WebSocketClient : MonoBehaviour
         float mappedGyroY = gyroY * gyroRotationScale;  // Obrót wokół osi Y
         float mappedGyroZ = gyroX* gyroRotationScale; // Ignorowanie rotacji wokół osi Z
 
-        Vector3 currentGyroRotation = new Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
+        UnityEngine.Vector3 currentGyroRotation = new UnityEngine.Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
 
         // Wygładzanie danych z żyroskopu
-        Vector3 smoothedGyroRotation = Vector3.Lerp(lastGyroData, currentGyroRotation, smoothingFactor);
+        UnityEngine.Vector3 smoothedGyroRotation = UnityEngine.Vector3.Lerp(lastGyroData, currentGyroRotation, smoothingFactor);
         lastGyroData = smoothedGyroRotation;
 
         // Obrót za pomocą Quaternion
-        Quaternion gyroRotation = Quaternion.Euler(smoothedGyroRotation);
+        UnityEngine.Quaternion gyroRotation = UnityEngine.Quaternion.Euler(smoothedGyroRotation);
 
         // Aktualizacja rotacji obiektu
-        transform.localRotation = Quaternion.Slerp(transform.rotation, gyroRotation * transform.rotation, deltaTime * 120.0f);
+        transform.localRotation = UnityEngine.Quaternion.Slerp(transform.rotation, gyroRotation * transform.rotation, deltaTime * 120.0f);
     }
 
     void Rotate(float gyroX, float gyroY, float gyroZ, float deltaTime)
@@ -221,17 +299,17 @@ public class WebSocketClient : MonoBehaviour
         float mappedGyroY = -gyroZ * gyroRotationScale;  // Obrót wokół osi Y
         float mappedGyroZ = -gyroX * gyroRotationScale; // Obrót wokół osi Z
     
-        Vector3 currentGyroRotation = new Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
+        UnityEngine.Vector3 currentGyroRotation = new UnityEngine.Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
     
         // Wygładzanie danych z żyroskopu
-        Vector3 smoothedGyroRotation = Vector3.Lerp(lastGyroData, currentGyroRotation, smoothingFactor);
+        UnityEngine.Vector3 smoothedGyroRotation = UnityEngine.Vector3.Lerp(lastGyroData, currentGyroRotation, smoothingFactor);
         lastGyroData = smoothedGyroRotation;
     
         // Obrót za pomocą Quaternion
-        Quaternion gyroRotation = Quaternion.Euler(smoothedGyroRotation);
+        UnityEngine.Quaternion gyroRotation = UnityEngine.Quaternion.Euler(smoothedGyroRotation);
     
         // Aktualizacja rotacji obiektu
-        transform.rotation = Quaternion.Slerp(transform.rotation, gyroRotation * transform.rotation, deltaTime*120.0f);
+        transform.rotation = UnityEngine.Quaternion.Slerp(transform.rotation, gyroRotation * transform.rotation, deltaTime*120.0f);
     
     }
 
@@ -409,7 +487,7 @@ public class WebSocketClient : MonoBehaviour
     //}
 
 
-    Vector3 CorrectDrift(Vector3 gyroData, float driftCorrectionFactor) { return gyroData * (1.0f - driftCorrectionFactor); }
+    UnityEngine.Vector3 CorrectDrift(UnityEngine.Vector3 gyroData, float driftCorrectionFactor) { return gyroData * (1.0f - driftCorrectionFactor); }
 
     private void OnApplicationQuit()
     {
