@@ -31,24 +31,14 @@ public class GameRotationData
 
 public class WebSocketClient : MonoBehaviour
 {
-    private UnityEngine.Quaternion gyroQuaternion;
     private UnityEngine.Vector3 position;
-    private UnityEngine.Vector3 velocity;
-     private bool hasLeftInitialPosition = false;
-    private UnityEngine.Vector3 lastRotationSpeed = UnityEngine.Vector3.zero;
-    private float maxRotationSpeed = 5.0f;
 
     private UnityEngine.Quaternion initialRotation;
 
     private UnityEngine.Vector3 lastGyroData;
-    private UnityEngine.Vector3 lastAccelData;
-
+    
     private WebSocket webSocket;
     private Queue<string> messageQueue = new Queue<string>();
-
-
-    private List<float> currentQuaternion = new List<float>();
-
     // Zmienna do przechowywania odniesienia do obiektu
     public GameObject controlledObject; // Przypisz obiekt w Inspectorze
 
@@ -167,25 +157,50 @@ public class WebSocketClient : MonoBehaviour
         Debug.Log($"Motion Data: {motionData.accelX}, {motionData.accelY}, {motionData.accelZ}, {motionData.gyroX}, {motionData.gyroY}, {motionData.gyroZ}");
     }
 
+    //private UnityEngine.Quaternion initialOffsetQuaternion = new UnityEngine.Quaternion(0, 0, 0, 1); // Quaternion reprezentujący nową pozycję początkową
 
+    private UnityEngine.Quaternion initialOffsetQuaternion = UnityEngine.Quaternion.identity;
+
+
+    
     void HandleRotationData(RotationData rotationData)
     {
         if (rotationData.quaternion != null && rotationData.quaternion.Count == 4)
-        {
-            // Tworzymy quaternion z listy (zakładając, że jest to 4-elementowa lista)
-            UnityEngine.Quaternion rotation = new UnityEngine.Quaternion(rotationData.quaternion[0], rotationData.quaternion[1], -rotationData.quaternion[2], rotationData.quaternion[3]);
+        { // Tworzenie quaternionu na podstawie danych z telefonu
+            UnityEngine.Quaternion phoneQuaternion = new UnityEngine.Quaternion(-rotationData.quaternion[0], rotationData.quaternion[1], rotationData.quaternion[2], rotationData.quaternion[3]);
+            // Przemnożenie quaternionu telefonu przez offset quaternion
     
-            float rotationSpeed = 5f; // Możesz dostosować tę wartość w zależności od potrzeb
-            transform.rotation = UnityEngine.Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
-        
-    }
+            // UnityEngine.Quaternion adjustedQuaternion = initialOffsetQuaternion * phoneQuaternion; 
+            // Ustawienie rotacji obiektu na podstawie przekształconego quaternionu
+            transform.localRotation = phoneQuaternion;
+        }
+        //transform.rotation = adjustedQuaternion; } 
         else
         {
             Debug.LogWarning("Niepoprawny quaternion lub brak danych.");
-        }
-        // Obsługuje dane rotacji
-        Debug.Log($"Rotation Data: {string.Join(", ", rotationData.quaternion)}");
+        } 
+            Debug.Log($"Rotation Data: {string.Join(", ", rotationData.quaternion)}"); 
     }
+
+
+    //void HandleRotationData(RotationData rotationData)
+    //{
+    //    if (rotationData.quaternion != null && rotationData.quaternion.Count == 4)
+    //    {
+    //        // Tworzymy quaternion z listy (zakładając, że jest to 4-elementowa lista)
+    //        UnityEngine.Quaternion rotation = new UnityEngine.Quaternion(rotationData.quaternion[0], rotationData.quaternion[1], -rotationData.quaternion[2], rotationData.quaternion[3]);
+    //
+    //        float rotationSpeed = 5f; // Możesz dostosować tę wartość w zależności od potrzeb
+    //        transform.rotation = UnityEngine.Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+    //    
+    //}
+    //    else
+    //    {
+    //        Debug.LogWarning("Niepoprawny quaternion lub brak danych.");
+    //    }
+    //    // Obsługuje dane rotacji
+    //    Debug.Log($"Rotation Data: {string.Join(", ", rotationData.quaternion)}");
+    //}
 
     void HandleGameRotationData(GameRotationData gameRotationData)
     {
