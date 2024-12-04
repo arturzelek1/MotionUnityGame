@@ -47,7 +47,7 @@ public class WebSocketClient : MonoBehaviour
         ConnectWebSocket();
 
         //initialRotation = transform.rotation.eulerAngles
-        initialRotation = transform.rotation;
+        
         Input.gyro.enabled = true;
     }
 
@@ -118,8 +118,6 @@ public class WebSocketClient : MonoBehaviour
                     //RotateSword(motionData.gyroX, motionData.gyroY, motionData.gyroZ, Time.deltaTime);
                     Debug.Log("Otrzymano dane MotionData");
                     HandleMotionData(motionData);
-                   
-
                 }
                 if(rotationData !=null)
                 {
@@ -161,8 +159,8 @@ public class WebSocketClient : MonoBehaviour
 
     private UnityEngine.Quaternion initialOffsetQuaternion = UnityEngine.Quaternion.identity;
 
-
-    
+    private UnityEngine.Quaternion initialOffsetPosition = UnityEngine.Quaternion.Euler( 0, 90 ,0 );
+    //private UnityEngine.Quaternion initialOffsetPosition;
     void HandleRotationData(RotationData rotationData)
     {
         if (rotationData.quaternion != null && rotationData.quaternion.Count == 4)
@@ -171,8 +169,12 @@ public class WebSocketClient : MonoBehaviour
             // Przemnożenie quaternionu telefonu przez offset quaternion
     
             // UnityEngine.Quaternion adjustedQuaternion = initialOffsetQuaternion * phoneQuaternion; 
+            UnityEngine.Quaternion adjustedQuaternion = initialOffsetPosition * phoneQuaternion;
+
             // Ustawienie rotacji obiektu na podstawie przekształconego quaternionu
-            transform.localRotation = phoneQuaternion;
+            //transform.localRotation = phoneQuaternion;
+
+            transform.localRotation = adjustedQuaternion;
         }
         //transform.rotation = adjustedQuaternion; } 
         else
