@@ -60,16 +60,29 @@
     <Analyzer Include="E:\Unity\2022.3.16f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\JTS_Wakizashi\Demo\Scripts\DemoCameraController.cs" />
-    <Compile Include="Assets\WebSocketClient.cs" />
-    <Compile Include="Assets\UnityMainThreadDispatcher.cs" />
+    <Compile Include="Assets\Scripts\UnityMainThreadDispatcher.cs" />
+    <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\MouseLook.cs" />
+    <Compile Include="Assets\JapaneseGarden\Broccoli\Controller\BroccoTreeController_1_2_5.cs" />
+    <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\WebSocketClient.cs" />
+    <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
+    <Compile Include="Assets\Katana\Demo\Scripts\DemoCameraController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\JTS_Wakizashi\_ReadMe.txt" />
+    <None Include="Assets\Envirement\StandardNoCulling.shader" />
+    <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Plants_Shader.shader" />
+    <None Include="Assets\Katana\_ReadMe.txt" />
     <None Include="Assets\Packages\WebSocketSharp-netstandard.1.0.1\lib\netstandard2.0\websocket-sharp.xml" />
-    <None Include="Assets\JTS_Wakizashi\Demo\Shaders\CustomWireframe.shader" />
-    <None Include="Assets\JTS_Wakizashi\Shaders\jts_custom_sword.shader" />
+    <None Include="Assets\Polytope Studio\Lowpoly_Village\Sources\Shaders\PT_Buildings_Shader_PBR.shader" />
+    <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader.shader" />
+    <None Include="Assets\JapaneseGarden\JapaneseGardenPackage\Textures\Credits.txt" />
+    <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader.shader" />
+    <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader.shader" />
+    <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />
+    <None Include="Assets\Katana\Demo\Shaders\CustomWireframe.shader" />
+    <None Include="Assets\Katana\Shaders\jts_custom_sword.shader" />
     <None Include="Assets\Packages\WebSocketSharp-netstandard.1.0.1\lib\netstandard2.0\websocket-sharp.dll" />
+    <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Rock_Shader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
