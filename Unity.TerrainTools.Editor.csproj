@@ -90,8 +90,8 @@
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\API\NoiseUtils.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\BrushControllers\BrushScatterVariator.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\Analytics\TerrainToolsAnalytics.cs" />
-    <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\NoiseSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\API\HlslDescriptions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\NoiseSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\BrushControllers\IBrushSmoothController.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\TerrainToolUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\BrushControllers\BaseBrushUIGroup.cs" />
@@ -100,8 +100,8 @@
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\API\GeneratedShaderInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\NoneFractalType.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\FilterStack\LayerFilter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\API\NoiseShaderGenerator.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainToolbox\TerrainDetailUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\API\NoiseShaderGenerator.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainToolbox\Data\TerrainVisualizationSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\FilterStack\AddFilter.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\FilterStack\MultiplyFilter.cs" />
@@ -131,8 +131,8 @@
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\DetailsScatterTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\Editor\ExportNoiseGUI.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\BrushControllers\IBrushUIGroup.cs" />
-    <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\BrushControllers\BrushShortcutType.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\Editor\ExportNoiseWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\BrushControllers\BrushShortcutType.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainToolbox\Data\TerrainSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\ContrastTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\Editor\NoiseWindow.cs" />
@@ -171,8 +171,8 @@
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\BrushControllers\IPaintContextRender.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\BrushControllers\IBrushScatterController.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\Importers\TerrainToolsShaderImporter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\API\FractalType.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\VoronoiNoise.cs" />
+    <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\API\FractalType.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\NoiseLib\API\NoiseType.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\PaintTextureTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.terrain-tools@5.0.5\Editor\TerrainTools\FilterStack\FilterUtility.cs" />

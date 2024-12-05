@@ -955,6 +955,10 @@
       <Project>{90F75D2C-7741-09A0-8807-C88A0C4796A2}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.Editor.csproj">
+      <Project>{CE2AE954-5E30-8517-B9E6-DBF28DA4FC36}</Project>
+      <Name>Unity.TerrainTools.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
       <Project>{28BDC2AC-A3AA-9E19-6294-AADBC78C4B6D}</Project>
       <Name>Unity.Performance.Profile-Analyzer.Editor</Name>
@@ -982,6 +986,10 @@
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{24181EC0-86B7-D64A-57DC-601BB9A76BF9}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.csproj">
+      <Project>{C1747F51-C85F-76DB-B5BF-EFD67C5EA87E}</Project>
+      <Name>Unity.TerrainTools</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{24CAF1CC-4205-FF1D-A6FE-A3C7294E6AB7}</Project>

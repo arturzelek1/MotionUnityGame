@@ -859,6 +859,10 @@
       <Project>{2EB3512D-04CB-1935-B4CC-98A65EAAF37E}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.Player.csproj">
+      <Project>{BA59CB88-8F24-4B17-D062-8FD3AFAEA797}</Project>
+      <Name>Unity.TerrainTools.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{2004350D-9C6E-FEDE-29B5-F0B726F3ABA2}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
