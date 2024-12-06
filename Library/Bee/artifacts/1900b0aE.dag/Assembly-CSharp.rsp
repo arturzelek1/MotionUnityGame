@@ -364,6 +364,7 @@
 "Assets/Katana/Demo/Scripts/DemoCameraController.cs"
 "Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/MouseLook.cs"
 "Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/PlayerMovement.cs"
+"Assets/Scripts/EnemyMoving.cs"
 "Assets/Scripts/ObjectSpawner.cs"
 "Assets/Scripts/UnityMainThreadDispatcher.cs"
 "Assets/Scripts/WebSocketClient.cs"
