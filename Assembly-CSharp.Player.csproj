@@ -64,9 +64,12 @@
     <Compile Include="Assets\Scripts\EnemyMoving.cs" />
     <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\MouseLook.cs" />
     <Compile Include="Assets\JapaneseGarden\Broccoli\Controller\BroccoTreeController_1_2_5.cs" />
+    <Compile Include="Assets\Scripts\EnemyDamage.cs" />
     <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\WebSocketClient.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
+    <Compile Include="Assets\Scripts\SwordCollision.cs" />
     <Compile Include="Assets\Katana\Demo\Scripts\DemoCameraController.cs" />
   </ItemGroup>
   <ItemGroup>

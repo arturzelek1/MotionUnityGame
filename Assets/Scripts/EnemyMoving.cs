@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour
         if (player != null)
         {
             // Kierunek do gracza
-            Vector3 direction = new Vector3(0, 0, player.position.z - transform.position.z).normalized;
+            Vector3 direction = new Vector3(0, 0, (player.position.z - 10) - transform.position.z).normalized;
 
             // Porusz przeciwnika
             transform.position += direction * speed * Time.deltaTime;
