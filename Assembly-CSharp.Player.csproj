@@ -70,10 +70,10 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\SwordCollision.cs" />
+    <Compile Include="Assets\HealthBar\HealthBarBehaviour.cs" />
     <Compile Include="Assets\Katana\Demo\Scripts\DemoCameraController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Envirement\StandardNoCulling.shader" />
     <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Plants_Shader.shader" />
     <None Include="Assets\Katana\_ReadMe.txt" />
     <None Include="Assets\Packages\WebSocketSharp-netstandard.1.0.1\lib\netstandard2.0\websocket-sharp.xml" />

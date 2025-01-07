@@ -301,6 +301,7 @@
 -r:"E:/Unity/2022.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"E:/Unity/2022.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.TerrainTools.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.Core.ref.dll"
@@ -309,8 +310,17 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
 -analyzer:"E:/Unity/2022.3.16f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"E:/Unity/2022.3.16f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/CubeBehaviour.cs"
-"Assets/WebSocketServer.cs"
+"Assets/JapaneseGarden/Broccoli/Controller/BroccoTreeController_1_2_5.cs"
+"Assets/Katana/Demo/Scripts/DemoCameraController.cs"
+"Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/MouseLook.cs"
+"Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/PlayerMovement.cs"
+"Assets/Scripts/EnemyDamage.cs"
+"Assets/Scripts/EnemyMoving.cs"
+"Assets/Scripts/ObjectSpawner.cs"
+"Assets/Scripts/PlayerHealth.cs"
+"Assets/Scripts/SwordCollision.cs"
+"Assets/Scripts/UnityMainThreadDispatcher.cs"
+"Assets/Scripts/WebSocketClient.cs"
 -langversion:9.0
 
 /deterministic

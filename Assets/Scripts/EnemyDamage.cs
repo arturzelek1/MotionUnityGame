@@ -7,7 +7,7 @@ public class EnemyThreshold : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.z < 6)
+        if (transform.position.z < 9)
         {
             // Znajdź gracza i zadaj mu obrażenia
             GameObject player = GameObject.FindWithTag("Player");

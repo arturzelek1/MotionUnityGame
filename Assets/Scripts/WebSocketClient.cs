@@ -160,7 +160,7 @@ public class WebSocketClient : MonoBehaviour
     private UnityEngine.Quaternion initialOffsetQuaternion = UnityEngine.Quaternion.identity;
 
     private UnityEngine.Quaternion initialOffsetYRotation = UnityEngine.Quaternion.Euler( 0, 90 ,0 );
-    private UnityEngine.Quaternion initialOffsetXRotation = UnityEngine.Quaternion.Euler(0,0,-90);
+    private UnityEngine.Quaternion initialOffsetZRotation = UnityEngine.Quaternion.Euler(0,0,-90);
     
     void HandleRotationData(RotationData rotationData)
     {
@@ -170,8 +170,8 @@ public class WebSocketClient : MonoBehaviour
             // Przemnożenie quaternionu telefonu przez offset quaternion
     
             //UnityEngine.Quaternion adjustedQuaternion = phoneQuaternion; 
-            UnityEngine.Quaternion adjustedQuaternion = initialOffsetYRotation * initialOffsetXRotation * phoneQuaternion;
-
+            //UnityEngine.Quaternion adjustedQuaternion = initialOffsetYRotation * initialOffsetXRotation * phoneQuaternion;
+            UnityEngine.Quaternion adjustedQuaternion = initialOffsetYRotation * initialOffsetZRotation * phoneQuaternion;
             // Ustawienie rotacji obiektu na podstawie przekształconego quaternionu
             //transform.localRotation = phoneQuaternion;
 
@@ -311,180 +311,6 @@ public class WebSocketClient : MonoBehaviour
         transform.rotation = UnityEngine.Quaternion.Slerp(transform.rotation, gyroRotation * transform.rotation, deltaTime*120.0f);
     
     }
-
-    //void MoveSword(float gyroX, float gyroY, float gyroZ, float accelX, float accelY, float accelZ, float deltaTime)
-    // {
-    //     float gyroScale = 20.0f;
-    //     float gyroScaleSwing = 20.0f;
-    //     float gyroScaleHorizontal = 20.0f;
-    //     float gyroScaleAround = 40.0f;
-    //
-    //     // Re-map the gyroscope data to match the desired orientation
-    //     float mappedGyroX = -gyroZ * gyroScaleSwing; // Unity X based on phone Z
-    //     float mappedGyroY = gyroY * gyroScaleHorizontal; // Unity Y based on phone X
-    //     float mappedGyroZ = -gyroX * gyroScaleAround; // Unity Z based on phone Y
-    //
-    //     Vector3 currentGyro = new Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
-    //
-    //     // Smoothing the gyroscope data
-    //     float smoothingFactor = 0.8f;
-    //     Vector3 smoothedGyro = Vector3.Slerp(lastGyroData, currentGyro, smoothingFactor);
-    //     lastGyroData = smoothedGyro;
-    //
-    //     // Combine accelerometer and gyroscope data for more realistic rotation (using Quaternion)
-    //     Quaternion gyroRotation = Quaternion.Euler(smoothedGyro * deltaTime);
-    //
-    //     // --- Smooth the accelerometer data ---
-    //     Vector3 currentAccel = new Vector3(-accelX, accelY, accelZ);
-    //
-    //     // Apply smoothing to the accelerometer data (using similar approach to gyroscope)
-    //     float accelSmoothingFactor = 0.5f; // You can adjust this value for more/less smoothing
-    //     Vector3 smoothedAccel = Vector3.Lerp(lastAccelData, currentAccel, accelSmoothingFactor);
-    //     lastAccelData = smoothedAccel;
-    //
-    //     // Normalize the accelerometer vector to avoid scaling issues
-    //     smoothedAccel.Normalize();
-    //
-    //     // Convert accelerometer data to a quaternion rotation (from "up" to the accelerometer vector)
-    //     Quaternion accelRotation = Quaternion.FromToRotation(Vector3.up, smoothedAccel);
-    //
-    //     // Final rotation as a combination of both accelerometer and gyroscope
-    //     Quaternion finalRotation = accelRotation * gyroRotation;
-    //
-    //     // Update the object's rotation based on the calculated final rotation
-    //     transform.rotation = Quaternion.Slerp(transform.rotation, finalRotation, deltaTime * 80.0f);
-    //
-    //     // Apply rotation around the Z-axis based on gyroZ data for more fine-tuned control
-    //     float rotationAmount = smoothedGyro.z * deltaTime * gyroScale; // Z-axis rotation
-    //     transform.Rotate(Vector3.forward, rotationAmount, Space.Self); // Rotate around the local Z-axis (Space.Self ensures local space)
-    // }
-
-    // void MoveSword(float gyroX, float gyroY, float gyroZ, float accelX, float accelY, float accelZ, float deltaTime)
-    // {
-    //     // Skalowanie danych z akcelerometru
-    //     float accelScale = 5.0f; // Możesz dostosować ten współczynnik
-    //     Vector3 currentAccel = new Vector3(-accelX, accelY, accelZ);
-    //
-    //     // Smoothing akcelerometru
-    //     float accelSmoothingFactor = 0.5f;
-    //     Vector3 smoothedAccel = Vector3.Lerp(lastAccelData, currentAccel, accelSmoothingFactor);
-    //     lastAccelData = smoothedAccel;
-    //
-    //     // Normalizowanie akcelerometru
-    //     smoothedAccel.Normalize();
-    //
-    //     // Oblicz ruch obiektu w przestrzeni w oparciu o dane z akcelerometru
-    //     Vector3 moveAmount = smoothedAccel * accelScale * deltaTime;
-    //
-    //     // Zaktualizuj pozycję obiektu
-    //     transform.position += moveAmount;
-    //
-    //     // Ogranicz ruch obiektu do granic kamery, tylko na osiach X i Y
-    //     LimitMovementToCamera();
-    // }
-    //
-    // void LimitMovementToCamera()
-    // {
-    //     // Pobierz kamerę
-    //     Camera camera = Camera.main;
-    //
-    //     // Uzyskaj granice widoku kamery w przestrzeni świata
-    //     float cameraHeight = camera.orthographicSize * 2.0f; // Dla kamer ortograficznych
-    //     float cameraWidth = cameraHeight * camera.aspect;  // Dla kamer ortograficznych
-    //
-    //     // Przypisz maksymalne granice w przestrzeni kamery
-    //     float minX = camera.transform.position.x - cameraWidth / 2;
-    //     float maxX = camera.transform.position.x + cameraWidth / 2;
-    //     float minY = camera.transform.position.y - cameraHeight / 2;
-    //     float maxY = camera.transform.position.y + cameraHeight / 2;
-    //
-    //     // Ogranicz ruch obiektu do granic kamery, ale nie zmieniaj osi Z
-    //     transform.position = new Vector3(
-    //         Mathf.Clamp(transform.position.x, minX, maxX), // Ograniczamy tylko oś X
-    //         Mathf.Clamp(transform.position.y, minY, maxY), // Ograniczamy tylko oś Y
-    //         transform.position.z // Oś Z pozostaje bez zmian
-    //     );
-    // }
-
-    // void MoveSword(float gyroX, float gyroY, float gyroZ, float deltaTime)
-    // {
-    //     float gyroScale = 20.0f;
-    //     float gyroScaleSwing = 20.0f;
-    //     float gyroScaleHorizontal = 20.0f;
-    //     float gyroScaleAround = 40.0f;
-    //
-    //     // Re-map the gyroscope data to match the desired orientation
-    //     float mappedGyroX = gyroZ * gyroScaleSwing; // Unity X based on phone Z
-    //     float mappedGyroY = -gyroY * gyroScaleHorizontal; // Unity Y based on phone X
-    //     float mappedGyroZ = gyroX * gyroScaleAround; // Unity Z based on phone Y
-    //
-    //     Vector3 currentGyro = new Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
-    //
-    //     // Smoothing the gyroscope data
-    //     float smoothingFactor = 0.8f;
-    //     Vector3 smoothedGyro = Vector3.Slerp(lastGyroData, currentGyro, smoothingFactor);
-    //     lastGyroData = smoothedGyro;
-    //
-    //     // Calculate delta rotation (rotation around the local axes)
-    //     Quaternion deltaRotation = new Quaternion(
-    //         smoothedGyro.x * deltaTime / 2,
-    //         smoothedGyro.y * deltaTime / 2,
-    //         smoothedGyro.z * deltaTime / 2,
-    //         0);
-    //
-    //     deltaRotation.w = 1.0f - (smoothedGyro.x * smoothedGyro.x + smoothedGyro.y * smoothedGyro.y + smoothedGyro.z * smoothedGyro.z) * (deltaTime * deltaTime) / 8.0f;
-    //
-    //     // Update the quaternion with the new delta rotation
-    //     gyroQuaternion = deltaRotation * gyroQuaternion;
-    //     gyroQuaternion.Normalize();
-    //
-    //     // Apply the updated rotation to the whole object
-    //     transform.rotation = Quaternion.Slerp(transform.rotation, gyroQuaternion, deltaTime * 80.0f);
-    //
-    //     // Rotate around the Z-axis based on gyroZ data
-    //     float rotationAmount = smoothedGyro.y * deltaTime * gyroScale; // Z-axis rotation
-    //     transform.Rotate(Vector3.forward, rotationAmount, Space.Self); // Rotate around the local Z-axis (Space.Self ensures local space)
-    // }
-    // }    void MoveSword(float gyroX, float gyroY, float gyroZ, float deltaTime)
-    // {
-    //     float gyroScale = 20.0f;
-    //     float gyroScaleSwing = 20.0f;
-    //     float gyroScaleHorizontal = 20.0f;
-    //    float gyroScaleAround = 40.0f;
-    //
-    //    // Re-map the gyroscope data to match the desired orientation
-    //    float mappedGyroX = gyroZ * gyroScaleSwing; // Unity X based on phone Z
-    //    float mappedGyroY = -gyroY * gyroScaleHorizontal; // Unity Y based on phone X
-    //    float mappedGyroZ = gyroX * gyroScaleAround; // Unity Z based on phone Y
-    //
-    //    Vector3 currentGyro = new Vector3(mappedGyroX, mappedGyroY, mappedGyroZ);
-    //
-    //    // Smoothing the gyroscope data
-    //    float smoothingFactor = 0.8f;
-    //    Vector3 smoothedGyro = Vector3.Slerp(lastGyroData, currentGyro, smoothingFactor);
-    //    lastGyroData = smoothedGyro;
-    //
-    //    // Calculate delta rotation (rotation around the local axes)
-    //    Quaternion deltaRotation = new Quaternion(
-    //        smoothedGyro.x * deltaTime / 2,
-    //        smoothedGyro.y * deltaTime / 2,
-    //        smoothedGyro.z * deltaTime / 2,
-    //        0);
-    //
-    //    deltaRotation.w = 1.0f - (smoothedGyro.x * smoothedGyro.x + smoothedGyro.y * smoothedGyro.y + smoothedGyro.z * smoothedGyro.z) * (deltaTime * deltaTime) / 8.0f;
-    //
-    //    // Update the quaternion with the new delta rotation
-    //    gyroQuaternion = deltaRotation * gyroQuaternion;
-    //    gyroQuaternion.Normalize();
-    //
-    //    // Apply the updated rotation to the whole object
-    //    transform.rotation = Quaternion.Slerp(transform.rotation, gyroQuaternion, deltaTime * 80.0f);
-    //
-    //    // Move along the Z-axis based on gyroZ data
-    //    float moveAmount = smoothedGyro.z * deltaTime * gyroScale; // Z-axis movement
-    //    transform.Translate(Vector3.forward * moveAmount, Space.Self); // Move relative to the object's own local space
-    //}
-
 
     UnityEngine.Vector3 CorrectDrift(UnityEngine.Vector3 gyroData, float driftCorrectionFactor) { return gyroData * (1.0f - driftCorrectionFactor); }
 
