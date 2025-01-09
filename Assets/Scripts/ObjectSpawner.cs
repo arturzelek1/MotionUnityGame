@@ -6,11 +6,16 @@ public class ObjectSpawner : MonoBehaviour
 {
     public GameObject objectToSpawn;
     public Transform[] spawnPoints;
+    public bool isSpawning;
 
     // Start is called before the first frame update
-    void Start()
+    public void StartSpawning()
     {
-        InvokeRepeating("SpawnObject", 1f, 2f);
+        if (!isSpawning)
+        {
+            isSpawning = true;
+            InvokeRepeating("SpawnObject", 1f, 2f);
+        }
     }
 
     // Update is called once per frame
