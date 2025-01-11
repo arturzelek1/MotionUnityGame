@@ -367,6 +367,7 @@
 "Assets/Scripts/EnemyDamage.cs"
 "Assets/Scripts/EnemyMoving.cs"
 "Assets/Scripts/ObjectSpawner.cs"
+"Assets/Scripts/ObjectSpawnerFor2Players.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/SceneManagement.cs"
 "Assets/Scripts/SwordCollision.cs"

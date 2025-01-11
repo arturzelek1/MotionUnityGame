@@ -1,12 +1,28 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
+    //Singleton to have global acces to that variable
+    public static ObjectSpawner Instance {  get; private set; }
+
     public GameObject objectToSpawn;
     public Transform[] spawnPoints;
     public bool isSpawning;
+
+    //Checking if this is first instance of object spawner
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+
+        DontDestroyOnLoad(gameObject);
+    }
 
     // Start is called before the first frame update
     public void StartSpawning()
