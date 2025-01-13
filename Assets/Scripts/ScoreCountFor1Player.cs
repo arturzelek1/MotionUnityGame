@@ -8,7 +8,6 @@ public class ScoreCountFor1Player : MonoBehaviour
     public static ScoreCountFor1Player Instance;
 
     private int Player1Score = 0;
-    private int Player2Score = 0;
 
     public TMP_Text player1ScoreText;
 
@@ -45,7 +44,6 @@ public class ScoreCountFor1Player : MonoBehaviour
 
     public void ResetScore()
     {
-        Player2Score = 0;
         Player1Score = 0;
         UpdateScoreDisplay();
     }

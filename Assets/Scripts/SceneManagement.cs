@@ -13,11 +13,6 @@ public class SceneManagement : MonoBehaviour
     private void Start()
     {
         selectGameCanvas.gameObject.SetActive(false);
-
-        /*if (objectSpawner != null)
-        {
-            objectSpawner.isSpawning = false;
-        }*/
     }
     public void PlayGame()
     {
@@ -26,16 +21,6 @@ public class SceneManagement : MonoBehaviour
             menuCanvas.gameObject.SetActive(false);
             selectGameCanvas.gameObject.SetActive(true);
         }
-        /*if(OnePlayerScene != null) 
-        {
-            //menuCanvas.gameObject.SetActive(false);
-            //gameCanvas.gameObject.SetActive(true);
-            SceneManager.LoadScene("OnePlayerScene");
-           /* if (objectSpawner != null)
-            {
-                objectSpawner.StartSpawning();
-            }
-        }*/
     }
 
     public void PlayOnePlayerGame()
@@ -43,14 +28,6 @@ public class SceneManagement : MonoBehaviour
         if (OnePlayerScene != null)
         {
             SceneManager.LoadScene("OnePlayerScene");
-            if (ObjectSpawner.Instance != null)
-            {
-                ObjectSpawner.Instance.StartSpawning();
-            }
-            else
-            {
-                Debug.Log("Singleton wrong initialized");
-            }
         }
     }
 

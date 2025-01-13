@@ -3,56 +3,36 @@
   "WorkspaceRootPath": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\SwordCollision2Players.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\SwordCollision2Players.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|e:\\ubb\\inzynierka\\repos\\unitygame\\motionunitygame\\assets\\scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|e:\\ubb\\inzynierka\\repos\\unitygame\\motionunitygame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|e:\\ubb\\inzynierka\\repos\\unitygame\\motionunitygame\\assets\\scripts\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\scenemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scenemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\scorecount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scorecount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemydamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\swordcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\swordcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\scorecountfor1player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scorecountfor1player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\websocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\websocketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\objectspawnerfor2players.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectspawnerfor2players.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scriptsfor2players\\gamemanager2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsfor2players\\gamemanager2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\enemymoving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemymoving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\HealthBar\\HealthBarBehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\HealthBar\\HealthBarBehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\scorecountfor1player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scorecountfor1player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\assets\\scripts\\swordcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B30FBE8-A30E-B5CC-710A-E14A0E3CFB9D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\swordcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,17 +42,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerHealth.cs",
+              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerHealth.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T22:02:50.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ObjectSpawner.cs",
+              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ObjectSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectSpawner.cs",
+              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ObjectSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ObjectSpawner.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T21:50:31.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameManager2.cs",
+              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\ScriptsFor2Players\\GameManager2.cs",
+              "RelativeDocumentMoniker": "Assets\\ScriptsFor2Players\\GameManager2.cs",
+              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\ScriptsFor2Players\\GameManager2.cs",
+              "RelativeToolTip": "Assets\\ScriptsFor2Players\\GameManager2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T19:56:57.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "GameManager.cs",
               "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T19:18:06.046Z",
               "EditorCaption": ""
@@ -85,22 +104,9 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\SceneManagement.cs",
               "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\SceneManagement.cs",
               "RelativeToolTip": "Assets\\Scripts\\SceneManagement.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAMAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwB0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T16:01:57.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SwordCollision2Players.cs",
-              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\SwordCollision2Players.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SwordCollision2Players.cs",
-              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\SwordCollision2Players.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SwordCollision2Players.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T19:11:58.884Z",
               "EditorCaption": ""
             },
             {
@@ -111,26 +117,13 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreCountFor1Player.cs",
               "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ScoreCountFor1Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\ScoreCountFor1Player.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAwAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwC0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T19:02:49.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ScoreCount.cs",
-              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ScoreCount.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreCount.cs",
-              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ScoreCount.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ScoreCount.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowEEAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T18:06:48.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SwordCollision.cs",
               "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\SwordCollision.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SwordCollision.cs",
@@ -142,80 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ObjectSpawnerFor2Players.cs",
-              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ObjectSpawnerFor2Players.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectSpawnerFor2Players.cs",
-              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ObjectSpawnerFor2Players.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ObjectSpawnerFor2Players.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T21:06:17.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ObjectSpawner.cs",
-              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ObjectSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectSpawner.cs",
-              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\ObjectSpawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ObjectSpawner.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T10:25:47.749Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WebSocketClient.cs",
-              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\WebSocketClient.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WebSocketClient.cs",
-              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\WebSocketClient.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WebSocketClient.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA1wKMAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:25:30.005Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HealthBarBehaviour.cs",
-              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\HealthBar\\HealthBarBehaviour.cs",
-              "RelativeDocumentMoniker": "Assets\\HealthBar\\HealthBarBehaviour.cs",
-              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\HealthBar\\HealthBarBehaviour.cs",
-              "RelativeToolTip": "Assets\\HealthBar\\HealthBarBehaviour.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T16:33:40.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PlayerHealth.cs",
-              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\PlayerHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerHealth.cs",
-              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\PlayerHealth.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerHealth.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T15:40:23.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EnemyDamage.cs",
-              "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\EnemyDamage.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyDamage.cs",
-              "ToolTip": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\EnemyDamage.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnemyDamage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T15:39:53.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "EnemyMoving.cs",
               "DocumentMoniker": "E:\\UBB\\Inzynierka\\Repos\\UnityGame\\MotionUnityGame\\Assets\\Scripts\\EnemyMoving.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyMoving.cs",
@@ -223,7 +143,8 @@
               "RelativeToolTip": "Assets\\Scripts\\EnemyMoving.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T13:43:10.928Z"
+              "WhenOpened": "2024-12-06T13:43:10.928Z",
+              "EditorCaption": ""
             }
           ]
         }

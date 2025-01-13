@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public Canvas GameUI;
     public Canvas EndGameUI;
-    // Start is called before the first frame update
+
     void Start()
     {
         GameUI.gameObject.SetActive(true);
@@ -16,9 +15,14 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void GameEnd()
+    public void GameEnd()
     {
         GameUI.gameObject.SetActive(false);
-        EndGameUI.gameObject.SetActive(true);
+        EndGameUI.gameObject.SetActive(true);   
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MenuTitle");
     }
 }
