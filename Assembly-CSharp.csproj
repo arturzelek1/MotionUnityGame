@@ -87,6 +87,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\ScriptsFor2Players\Player2Controller.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\JapaneseGarden\Broccoli\Controller\BroccoTreeController_1_2_5.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Assets\Scripts\ScoreCountFor1Player.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\WebSocketClient.cs" />
+    <Compile Include="Assets\Scripts\Player1Controller.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Assets\Scripts\SwordCollision.cs" />
     <Compile Include="Assets\ScriptsFor2Players\GameManager2.cs" />
     <Compile Include="Assets\Katana\Demo\Scripts\DemoCameraController.cs" />
+    <Compile Include="Assets\Scripts\WebSocketServer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>
   <ItemGroup>

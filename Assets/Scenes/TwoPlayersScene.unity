@@ -1905,8 +1905,8 @@ GameObject:
   - component: {fileID: 1485867306}
   - component: {fileID: 1485867305}
   - component: {fileID: 1485867304}
-  - component: {fileID: 1485867308}
   - component: {fileID: 1485867309}
+  - component: {fileID: 1485867310}
   m_Layer: 0
   m_Name: FirstPlayer
   m_TagString: Player
@@ -2001,19 +2001,6 @@ Transform:
   - {fileID: 902371213}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1485867308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485867302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b7010b6e47fa964b814505fb153513f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlledObject: {fileID: 0}
 --- !u!114 &1485867309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,6 +2017,18 @@ MonoBehaviour:
   healthBar: {fileID: 2005193748}
   gameManager2: {fileID: 0}
   ObjectSpawner: {fileID: 39472411}
+--- !u!114 &1485867310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485867302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f973195997114ac429d2a6c312bd457c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1512691250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2689,9 +2688,9 @@ GameObject:
   - component: {fileID: 1930931072}
   - component: {fileID: 1930931071}
   - component: {fileID: 1930931070}
-  - component: {fileID: 1930931069}
   - component: {fileID: 1930931074}
   - component: {fileID: 1930931075}
+  - component: {fileID: 1930931076}
   m_Layer: 0
   m_Name: SecondPlayer
   m_TagString: Player2
@@ -2699,19 +2698,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1930931069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930931067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b7010b6e47fa964b814505fb153513f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlledObject: {fileID: 0}
 --- !u!65 &1930931070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2829,6 +2815,18 @@ MonoBehaviour:
   healthBar: {fileID: 1512691252}
   gameManager2: {fileID: 0}
   ObjectSpawner: {fileID: 39472411}
+--- !u!114 &1930931076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930931067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbe40d98caeade478bb72bfa0fe8863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1986325165
 PrefabInstance:
   m_ObjectHideFlags: 0
